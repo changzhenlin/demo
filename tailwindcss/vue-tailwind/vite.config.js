@@ -10,5 +10,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  commonjsOptions: {
+    esmExternals: true,
+ },
+ define: {
+  'process.env': {
+    BaseUrl: "localhost:3000", 
+  },
+}
 })
